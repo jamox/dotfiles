@@ -33,5 +33,5 @@ symlink '.vimrc'
 symlink '.vim'
 
 # Zsh
-symlink '.zsh'
+symlink '.zshrc'
 symlink '.oh-my-zsh'
