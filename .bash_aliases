@@ -1,0 +1,15 @@
+alias kapsi="mosh lakka.kapsi.fi -p 62050"
+#"ssh -X -C jamo@kapsi.fi"
+alias melkki="ssh jarmoiso@melkki.cs.helsinki.fi -C -X"
+alias ls="gls --color=auto"
+alias server="python -m SimpleHTTPServer 8080"
+alias melkinkari="ssh jarmoiso@melkinkari.cs.helsinki.fi -C"
+alias sshfsmelkki="sshfs jarmoiso@melkki.cs.helsinki.fi:/cs/fs/home/jarmoiso /Users/jamo/mount/melkki"
+alias sshfsmelkkijava="sshfs jarmoiso@melkki.cs.helsinki.fi:/home/group/java/ /Users/jamo/mount/melkkiJava"
+alias qnap="ssh -C -p 222 admin@koti.isotalo.fi"
+alias paste="ssh -C -p 7322 jamo@paste.testmycode.net"
+alias git=hub
+alias jamo="mosh jamo.fi"
+#"ssh -C jamo@jamo.fi"
+#alias emacs="aquamacs"
+
