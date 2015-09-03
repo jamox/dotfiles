@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/jamo/git/tmc/tmc/lib'
+let g:netrw_dirhist_2='/Users/jamo/git/tmc/tmc/lib/tmc'
+let g:netrw_dirhist_3='/Users/jamo/git/tmc/tmc/lib/tmc/commands'
+let g:netrw_dirhist_4='/Users/jamo/git/tmc/tmc/lib/tmc/commands/lint'
+let g:netrw_dirhist_5='/Users/jamo/git/tmc/tmc/lib/tmc'
+let g:netrw_dirhist_6='/Users/jamo/git/tmc/tmc/lib/tmc/commands'
