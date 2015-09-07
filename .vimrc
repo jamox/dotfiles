@@ -163,6 +163,15 @@ endfunction
 
 set autoindent            " use the indent of the previous line for a newly created line
 
+if !exists('g:ycm_semantic_triggers')
+  let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers.tex = [
+      \ 're!\\[A-Za-z]*(ref|cite)[A-Za-z]*([^]]*])?{([^}]*, ?)*'
+      \ ]
+let g:vimtex_complete_close_braces=1
+
+
 "" Jamo: assume this autocompletes tabs...
 ""inoremap <lt>/ </<C-X><C-O>
 " use real tabs ...
