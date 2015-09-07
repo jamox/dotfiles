@@ -35,3 +35,5 @@ symlink '.vim'
 # Zsh
 symlink '.zshrc'
 symlink '.oh-my-zsh'
+
+symlink '.latexmkrc'
