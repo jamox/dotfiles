@@ -6,6 +6,12 @@ set PATH $GOPATH/bin $HOME/bin /Applications/eclipse $HOME/android-sdks/platform
 #set PATH (ruby -rubygems -e "puts Gem.user_dir")/bin $PATH
 
 
+set PATH $HOME/.rbenv/bin $PATH
+set PATH $HOME/.rbenv/shims $PATH
+rbenv rehash >/dev/null ^&1
+
+
+
 alias psql-start="postgres -D /usr/local/var/postgres"
 set LC_CTYPE en_US.UTF-8
 set ANDROID_HOME /usr/local/opt/android-sdk
