@@ -11,7 +11,12 @@ set LC_CTYPE en_US.UTF-8
 set ANDROID_HOME /usr/local/opt/android-sdk
 set GNUTERM x11
 
-set JAVA_HOME /Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/
+if test -e "/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/"
+  set JAVA_HOME /Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/
+end
+if test -e "/usr/lib/jvm/java-7-openjdk-amd64/jre/"
+  set JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64/
+end
 
 # Abbreviations
 set -e _a
