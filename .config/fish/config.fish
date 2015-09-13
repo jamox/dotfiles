@@ -6,9 +6,13 @@ set PATH $GOPATH/bin $HOME/bin /Applications/eclipse $HOME/android-sdks/platform
 #set PATH (ruby -rubygems -e "puts Gem.user_dir")/bin $PATH
 
 
-set PATH $HOME/.rbenv/bin $PATH
-set PATH $HOME/.rbenv/shims $PATH
-rbenv rehash >/dev/null ^&1
+if test -e $HOME/.rbenv
+  set PATH $HOME/.rbenv/bin $PATH
+  set PATH $HOME/.rbenv/shims $PATH
+end
+if type rbenv > /dev/null 2>1&
+  rbenv rehash >/dev/null ^&1
+end
 
 
 
