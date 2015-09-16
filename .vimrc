@@ -24,7 +24,9 @@ NeoBundle 'kien/ctrlp.vim' " TODO: make this lazy
 NeoBundle 'scrooloose/nerdtree.git'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'https://github.com/altercation/vim-colors-solarized.git'
-NeoBundle 'lervag/vimtex'
+NeoBundle 'lervag/vimtex' " made it slow?
+NeoBundle 'jceb/vim-orgmode'
+NeoBundle 'tpope/vim-speeddating'
 "NeoBundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
 NeoBundle 'Valloric/YouCompleteMe', {
             \ 'lazy': 1,
