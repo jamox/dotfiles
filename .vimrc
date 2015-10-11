@@ -108,7 +108,6 @@ set clipboard=unnamed
 "" Whitespace
 ""
 
-set nowrap                        " don't wrap lines
 set softtabstop=2                 " use mix of spaces and tabs
 set shiftwidth=2                  " an autoindent (with <<) is two spaces
 set expandtab                     " use spaces, not tabs

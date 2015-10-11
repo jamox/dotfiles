@@ -37,8 +37,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-export PATH=$HOME/bin:/Applications/eclipse:$HOME/android-sdks/platform-tools:$HOME/android-sdks/tools:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/texbin:/usr/local/Cellar/ansible/1.4.3/bin/
-if [ $(type rbenv > /dev/null 2>1&) ]
+export PATH=$HOME/bin:/Applications/eclipse:$HOME/android-sdks/platform-tools:$HOME/android-sdks/tools:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/usr/local/Cellar/ansible/1.4.3/bin/:$PATH
+if [ $(type rbenv > /dev/null 2>&1) ]
 then
   echo "on rbenv"
   eval "$(rbenv init -)"
@@ -68,8 +68,7 @@ export GNUTERM x11
 if [ -d "/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/" ]
 then
   export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/"
-fi
-if [ -d "/usr/lib/jvm/java-7-openjdk-amd64/jre/" ]
+elif [ -d "/usr/lib/jvm/java-7-openjdk-amd64/jre/" ]
 then
   export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64/"
 fi
