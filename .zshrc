@@ -72,6 +72,12 @@ then
   export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64/"
 fi
 
+if [ -f /usr/local/rvm/scripts/rvm ]
+then
+  source /usr/local/rvm/scripts/rvm
+fi
+
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
