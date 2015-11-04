@@ -94,6 +94,7 @@ nmap <leader>bl :ls<CR>
 map <Leader>N <esc>:tabprevious<CR>
 map <Leader>M <esc>:tabnext<CR>
 
+set scrolloff=10
 set history=1000                  " keep 1000 commands and 1000 search patterns in the history
 set ruler                         " show line and column number
 syntax on                         " turn on syntax highlighting allowing local overrides
@@ -238,6 +239,7 @@ set statusline+=%<%f\                        "File
 set statusline+=%m%r%h%q%w\                  "Modified? Readonly? Help? Quickfix? Preview?
 set statusline+=%{SyntasticStatuslineFlag()} "Add syntastic if enabled
 set statusline+=%{fugitive#statusline()}\    "Add fugitive if enabled
+
 set statusline+=%y\                          "FileType
 set statusline+=[%{&fenc!=''?&fenc:&enc}     "Encoding
 set statusline+=%{(&bomb?',bom':'')}]\       "Encoding2

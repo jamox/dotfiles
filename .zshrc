@@ -37,13 +37,12 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-export PATH=$HOME/bin:/Applications/eclipse:$HOME/android-sdks/platform-tools:$HOME/android-sdks/tools:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/usr/local/Cellar/ansible/1.4.3/bin/:$PATH
-if [ $(type rbenv > /dev/null 2>&1) ]
-then
-  echo "on rbenv"
-  eval "$(rbenv init -)"
-  rbenv rehash >/dev/null ^&1
-fi
+export PATH=$HOME/.rbenv/bin:$HOME/bin:/Applications/eclipse:$HOME/android-sdks/platform-tools:$HOME/android-sdks/tools:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/usr/local/Cellar/ansible/1.4.3/bin/:$PATH
+#if [ $(type rbenv > /dev/null 2>&1) ]
+#then
+  eval "$(rbenv init -)" >/dev/null 2>&1
+  rbenv rehash  >/dev/null 2>&1
+#fi
 
 if [ -f $HOME/.rbenv ]; then
   export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
