@@ -2,7 +2,7 @@
 "
 " License: {{{
 "
-" Copyright (C) 2012 - 2013  Eric Van Dewoestine
+" Copyright (C) 2014  Eric Van Dewoestine
 "
 " This program is free software: you can redistribute it and/or modify
 " it under the terms of the GNU General Public License as published by
@@ -19,21 +19,6 @@
 "
 " }}}
 
-" Script Variables {{{
-let s:command_reload = '-command android_reload'
-" }}}
-
-function! eclim#android#Reload() " {{{
-  let result = eclim#Execute(s:command_reload)
-  if type(result) != g:DICT_TYPE
-    return
-  endif
-
-  if has_key(result, 'error')
-    call eclim#util#EchoError(result.error)
-  else
-    call eclim#util#Echo(result.message)
-  endif
-endfunction " }}}
+source $VIMRUNTIME/syntax/qf.vim
 
 " vim:ft=vim:fdm=marker
