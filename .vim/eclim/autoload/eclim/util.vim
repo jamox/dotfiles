@@ -590,14 +590,14 @@ function! eclim#util#GoToTabAwareBufferWindowOrOpen(name, cmd)
   let name = eclim#util#EscapeBufferName(a:name)
   let bufnr = bufnr('^' . name . '$')
   if bufnr != -1
-    try 
+    try
       " Backup switchbuf option before resetting it
       let old_switchbuf = &switchbuf
       exec 'set switchbuf=usetab,newtab'
 
       exec 'sb ' . bufnr
       call eclim#util#DelayedCommand('doautocmd WinEnter')
-    finally 
+    finally
       " Restore switchbuf option to original value
       let &switchbuf = old_switchbuf
     endtry
