@@ -291,7 +291,29 @@ cnoremap sudow w !sudo tee % >/dev/null
 set hidden
 
 
+set magic
 
+
+let g:EclimCompletionMethod = 'omnifunc'
+
+autocmd BufNewFile *.java call InsertJavaPackage()
+
+function! InsertJavaPackage()
+  let filename = expand("%")
+  let filename = substitute(filename, "\.java$", "", "")
+  let dir = getcwd() . "/" . filename
+  "" TODO: get the test and main substitutions on same line
+  let dir = substitute(dir, "^.*\/src\/test\/java\/", "", "")
+  let dir = substitute(dir, "^.*\/src\/main\/java\/", "", "")
+  let dir = substitute(dir, "\/[^\/]*$", "", "")
+  let dir = substitute(dir, "\/", ".", "g")
+  let filename = substitute(filename, "^.*\/", "", "")
+  let dir = "package " . dir . ";"
+  let result = append(0, dir)
+  let result = append(1, "")
+  let result = append(2, "class " . filename . " {")
+  let result = append(4, "}")
+endfunction
 
 
 

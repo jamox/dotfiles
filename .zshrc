@@ -85,7 +85,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
 
 # added by travis gem
-[ -f /home/jamo/.travis/travis.sh ] && source /home/jamo/.travis/travis.sh
+[ -f /Users/jamo/.travis/travis.sh ] && source /Users/jamo/.travis/travis.sh
 
 export NVM_DIR="/home/jamo/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
