@@ -11,3 +11,6 @@ fi
 
 
 export ANDROID_HOME=/usr/local/opt/android-sdk
+
+# added by travis gem
+[ -f /Users/jamo/.travis/travis.sh ] && source /Users/jamo/.travis/travis.sh
