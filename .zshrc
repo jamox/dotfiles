@@ -82,3 +82,6 @@ fi
 export PATH="/usr/local/heroku/bin:$PATH"
 
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
+
+# added by travis gem
+[ -f /Users/jamo/.travis/travis.sh ] && source /Users/jamo/.travis/travis.sh
