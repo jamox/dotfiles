@@ -288,11 +288,6 @@ cnoremap sudow w !sudo tee % >/dev/null
 "" To move between buffers w/o saving 'em
 set hidden
 
-
-
-
-
-
-
+let g:EclimCompletionMethod = 'omnifunc'
 
 
