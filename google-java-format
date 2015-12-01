@@ -1,0 +1,4 @@
+#!/bin/sh
+java -jar /Users/jamo/git/google-java-format/core/target/google-java-format-0.1-SNAPSHOT.jar -a -r  $@
+
+

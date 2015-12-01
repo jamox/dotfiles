@@ -277,6 +277,7 @@ Flag.GetCopy()	maktaba.txt	/*Flag.GetCopy()*
 Flag.Set()	maktaba.txt	/*Flag.Set()*
 Flag.Translate()	maktaba.txt	/*Flag.Translate()*
 GLIBC_2.XX-not-found()	youcompleteme.txt	/*GLIBC_2.XX-not-found()*
+GetDoc	youcompleteme.txt	/*GetDoc*
 GetParent	youcompleteme.txt	/*GetParent*
 GetType	youcompleteme.txt	/*GetType*
 Glaive	glaive.txt	/*Glaive*
@@ -446,9 +447,11 @@ airline-troubleshooting	airline.txt	/*airline-troubleshooting*
 airline-virtualenv	airline.txt	/*airline-virtualenv*
 airline-whitespace	airline.txt	/*airline-whitespace*
 airline-windowswap	airline.txt	/*airline-windowswap*
+airline-wordcount	airline.txt	/*airline-wordcount*
 airline-writing-extensions	airline.txt	/*airline-writing-extensions*
 airline.txt	airline.txt	/*airline.txt*
 b:codefmt_formatter	codefmt.txt	/*b:codefmt_formatter*
+b:neosnippet_disable_snippet_triggers	neosnippet.txt	/*b:neosnippet_disable_snippet_triggers*
 b:vimtex_main	vimtex.txt	/*b:vimtex_main*
 before	solarized.txt	/*before*
 bold	orgguide.txt	/*bold*
@@ -474,6 +477,7 @@ codefmt:plugin[autocmds]	codefmt.txt	/*codefmt:plugin[autocmds]*
 codefmt:plugin[commands]	codefmt.txt	/*codefmt:plugin[commands]*
 codefmt:plugin[mappings]	codefmt.txt	/*codefmt:plugin[mappings]*
 codefmt:plugin[register]	codefmt.txt	/*codefmt:plugin[register]*
+codefmt:yapf_executable	codefmt.txt	/*codefmt:yapf_executable*
 config/rails.vim	rails.txt	/*config\/rails.vim*
 ctrlp-changelog	ctrlp.txt	/*ctrlp-changelog*
 ctrlp-commands	ctrlp.txt	/*ctrlp-commands*
@@ -636,6 +640,7 @@ g:vimtex_latexmk_build_dir	vimtex.txt	/*g:vimtex_latexmk_build_dir*
 g:vimtex_latexmk_callback	vimtex.txt	/*g:vimtex_latexmk_callback*
 g:vimtex_latexmk_continuous	vimtex.txt	/*g:vimtex_latexmk_continuous*
 g:vimtex_latexmk_enabled	vimtex.txt	/*g:vimtex_latexmk_enabled*
+g:vimtex_latexmk_file_line_error	vimtex.txt	/*g:vimtex_latexmk_file_line_error*
 g:vimtex_latexmk_options	vimtex.txt	/*g:vimtex_latexmk_options*
 g:vimtex_latexmk_progname	vimtex.txt	/*g:vimtex_latexmk_progname*
 g:vimtex_mappings_enabled	vimtex.txt	/*g:vimtex_mappings_enabled*
@@ -684,6 +689,7 @@ g:ycm_collect_identifiers_from_tags_files	youcompleteme.txt	/*g:ycm_collect_iden
 g:ycm_complete_in_comments	youcompleteme.txt	/*g:ycm_complete_in_comments*
 g:ycm_complete_in_strings	youcompleteme.txt	/*g:ycm_complete_in_strings*
 g:ycm_confirm_extra_conf	youcompleteme.txt	/*g:ycm_confirm_extra_conf*
+g:ycm_csharp_insert_namespace_expr	youcompleteme.txt	/*g:ycm_csharp_insert_namespace_expr*
 g:ycm_csharp_server_port	youcompleteme.txt	/*g:ycm_csharp_server_port*
 g:ycm_disable_for_files_larger_than_kb	youcompleteme.txt	/*g:ycm_disable_for_files_larger_than_kb*
 g:ycm_echo_current_diagnostic	youcompleteme.txt	/*g:ycm_echo_current_diagnostic*
@@ -939,7 +945,6 @@ neobundle-options-name	neobundle.txt	/*neobundle-options-name*
 neobundle-options-overwrite	neobundle.txt	/*neobundle-options-overwrite*
 neobundle-options-recipe	neobundle.txt	/*neobundle-options-recipe*
 neobundle-options-regular_name	neobundle.txt	/*neobundle-options-regular_name*
-neobundle-options-resettable	neobundle.txt	/*neobundle-options-resettable*
 neobundle-options-rtp	neobundle.txt	/*neobundle-options-rtp*
 neobundle-options-script_type	neobundle.txt	/*neobundle-options-script_type*
 neobundle-options-site	neobundle.txt	/*neobundle-options-site*
@@ -1367,7 +1372,9 @@ without	solarized.txt	/*without*
 x_<Plug>(neosnippet_expand_target)	neosnippet.txt	/*x_<Plug>(neosnippet_expand_target)*
 x_<Plug>(neosnippet_register_oneshot_snippet)	neosnippet.txt	/*x_<Plug>(neosnippet_register_oneshot_snippet)*
 youcompleteme	youcompleteme.txt	/*youcompleteme*
+youcompleteme-c	youcompleteme.txt	/*youcompleteme-c*
 youcompleteme-c-diagnostic-support	youcompleteme.txt	/*youcompleteme-c-diagnostic-support*
+youcompleteme-c-family-languages	youcompleteme.txt	/*youcompleteme-c-family-languages*
 youcompleteme-c-family-semantic-completion-engine-usage	youcompleteme.txt	/*youcompleteme-c-family-semantic-completion-engine-usage*
 youcompleteme-client-server-architecture	youcompleteme.txt	/*youcompleteme-client-server-architecture*
 youcompleteme-commands	youcompleteme.txt	/*youcompleteme-commands*
@@ -1379,14 +1386,16 @@ youcompleteme-diagnostic-highlighting-groups	youcompleteme.txt	/*youcompleteme-d
 youcompleteme-faq	youcompleteme.txt	/*youcompleteme-faq*
 youcompleteme-freebsd-openbsd-installation	youcompleteme.txt	/*youcompleteme-freebsd-openbsd-installation*
 youcompleteme-full-installation-guide	youcompleteme.txt	/*youcompleteme-full-installation-guide*
+youcompleteme-general	youcompleteme.txt	/*youcompleteme-general*
 youcompleteme-general-semantic-completion-engine-usage	youcompleteme.txt	/*youcompleteme-general-semantic-completion-engine-usage*
 youcompleteme-general-usage	youcompleteme.txt	/*youcompleteme-general-usage*
+youcompleteme-go	youcompleteme.txt	/*youcompleteme-go*
 youcompleteme-i-get-an-internal-compiler-error-when-installing	youcompleteme.txt	/*youcompleteme-i-get-an-internal-compiler-error-when-installing*
 youcompleteme-i-get-annoying-messages-in-vims-status-area-when-i-type	youcompleteme.txt	/*youcompleteme-i-get-annoying-messages-in-vims-status-area-when-i-type*
 youcompleteme-i-get-weird-window-at-top-of-my-file-when-i-use-semantic-engine	youcompleteme.txt	/*youcompleteme-i-get-weird-window-at-top-of-my-file-when-i-use-semantic-engine*
 youcompleteme-i-have-homebrew-python-and-or-macvim-cant-compile-sigabrt-when-starting	youcompleteme.txt	/*youcompleteme-i-have-homebrew-python-and-or-macvim-cant-compile-sigabrt-when-starting*
 youcompleteme-im-trying-to-use-homebrew-vim-with-ycm-im-getting-segfaults	youcompleteme.txt	/*youcompleteme-im-trying-to-use-homebrew-vim-with-ycm-im-getting-segfaults*
-youcompleteme-install-ycm-with-neobundle-37	youcompleteme.txt	/*youcompleteme-install-ycm-with-neobundle-37*
+youcompleteme-install-ycm-with-neobundle-39	youcompleteme.txt	/*youcompleteme-install-ycm-with-neobundle-39*
 youcompleteme-installation	youcompleteme.txt	/*youcompleteme-installation*
 youcompleteme-intro	youcompleteme.txt	/*youcompleteme-intro*
 youcompleteme-introduction	youcompleteme.txt	/*youcompleteme-introduction*
@@ -1396,9 +1405,12 @@ youcompleteme-license	youcompleteme.txt	/*youcompleteme-license*
 youcompleteme-mac-os-x-super-quick-installation	youcompleteme.txt	/*youcompleteme-mac-os-x-super-quick-installation*
 youcompleteme-on-very-rare-occasions-vim-crashes-when-i-tab-through-completion-menu	youcompleteme.txt	/*youcompleteme-on-very-rare-occasions-vim-crashes-when-i-tab-through-completion-menu*
 youcompleteme-options	youcompleteme.txt	/*youcompleteme-options*
+youcompleteme-python-2	youcompleteme.txt	/*youcompleteme-python-2*
+youcompleteme-quick-feature-summary	youcompleteme.txt	/*youcompleteme-quick-feature-summary*
 youcompleteme-references	youcompleteme.txt	/*youcompleteme-references*
 youcompleteme-semantic-completion-for-other-languages	youcompleteme.txt	/*youcompleteme-semantic-completion-for-other-languages*
 youcompleteme-sometimes-it-takes-much-longer-to-get-semantic-completions-than-normal	youcompleteme.txt	/*youcompleteme-sometimes-it-takes-much-longer-to-get-semantic-completions-than-normal*
+youcompleteme-typescript	youcompleteme.txt	/*youcompleteme-typescript*
 youcompleteme-ubuntu-linux-x64-super-quick-installation	youcompleteme.txt	/*youcompleteme-ubuntu-linux-x64-super-quick-installation*
 youcompleteme-user-guide	youcompleteme.txt	/*youcompleteme-user-guide*
 youcompleteme-vim-segfaults-when-i-use-semantic-completer-in-ruby-files	youcompleteme.txt	/*youcompleteme-vim-segfaults-when-i-use-semantic-completer-in-ruby-files*

@@ -238,6 +238,11 @@ g:neosnippet#data_directory			*g:neosnippet#data_directory*
 		Default value is "$XDG_CACHE_HOME/neosnippet" or
 		expand("~/.cache/neosnippet"); the absolute path of it.
 
+				*b:neosnippet_disable_snippet_triggers*
+b:neosnippet_disable_snippet_triggers
+		Specifies the triggers which disables in the buffer.
+		It is useful to disable some snippet triggers.
+
 ------------------------------------------------------------------------------
 KEY MAPPINGS 					*neosnippet-key-mappings*
 
@@ -333,7 +338,7 @@ EXAMPLES					*neosnippet-examples*
 	"imap <expr><TAB>
 	" \ pumvisible() ? "\<C-n>" :
 	" \ neosnippet#expandable_or_jumpable() ?
-	" \    "\<TAB>" : "\<Plug>(neosnippet_expand_or_jump)"
+	" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 	"smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 	" \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 

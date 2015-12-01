@@ -94,6 +94,7 @@ nmap <leader>bl :ls<CR>
 map <Leader>N <esc>:tabprevious<CR>
 map <Leader>M <esc>:tabnext<CR>
 
+set scrolloff=10
 set history=1000                  " keep 1000 commands and 1000 search patterns in the history
 set ruler                         " show line and column number
 syntax on                         " turn on syntax highlighting allowing local overrides
@@ -238,6 +239,7 @@ set statusline+=%<%f\                        "File
 set statusline+=%m%r%h%q%w\                  "Modified? Readonly? Help? Quickfix? Preview?
 set statusline+=%{SyntasticStatuslineFlag()} "Add syntastic if enabled
 set statusline+=%{fugitive#statusline()}\    "Add fugitive if enabled
+
 set statusline+=%y\                          "FileType
 set statusline+=[%{&fenc!=''?&fenc:&enc}     "Encoding
 set statusline+=%{(&bomb?',bom':'')}]\       "Encoding2
@@ -290,4 +292,27 @@ set hidden
 
 let g:EclimCompletionMethod = 'omnifunc'
 
+set magic
+
+
+let g:EclimCompletionMethod = 'omnifunc'
+
+autocmd BufNewFile *.java call InsertJavaPackage()
+
+function! InsertJavaPackage()
+  let filename = expand("%")
+  let filename = substitute(filename, "\.java$", "", "")
+  let dir = getcwd() . "/" . filename
+  "" TODO: get the test and main substitutions on same line
+  let dir = substitute(dir, "^.*\/src\/test\/java\/", "", "")
+  let dir = substitute(dir, "^.*\/src\/main\/java\/", "", "")
+  let dir = substitute(dir, "\/[^\/]*$", "", "")
+  let dir = substitute(dir, "\/", ".", "g")
+  let filename = substitute(filename, "^.*\/", "", "")
+  let dir = "package " . dir . ";"
+  let result = append(0, dir)
+  let result = append(1, "")
+  let result = append(2, "class " . filename . " {")
+  let result = append(4, "}")
+endfunction
 

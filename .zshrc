@@ -37,12 +37,12 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-export PATH=$HOME/bin:/Applications/eclipse:$HOME/android-sdks/platform-tools:$HOME/android-sdks/tools:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/usr/local/Cellar/ansible/1.4.3/bin/:$PATH
-if [ $(type rbenv > /dev/null 2>&1) ]
+export PATH=$HOME/.rbenv/bin:$HOME/bin:/Applications/eclipse:$HOME/android-sdks/platform-tools:$HOME/android-sdks/tools:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/usr/local/Cellar/ansible/1.4.3/bin/:$PATH
+#if [ $(type rbenv > /dev/null 2>&1) ]
+if [ command -v foo >/dev/null 2>&1 ]
 then
-  echo "on rbenv"
-  eval "$(rbenv init -)"
-  rbenv rehash >/dev/null ^&1
+  eval "$(rbenv init -)" >/dev/null 2>&1
+  rbenv rehash  >/dev/null 2>&1
 fi
 
 if [ -f $HOME/.rbenv ]; then
@@ -73,7 +73,19 @@ then
   export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64/"
 fi
 
+if [ -f /usr/local/rvm/scripts/rvm ]
+then
+  source /usr/local/rvm/scripts/rvm
+fi
+
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
+
+# added by travis gem
+[ -f /Users/jamo/.travis/travis.sh ] && source /Users/jamo/.travis/travis.sh
+
+export NVM_DIR="/home/jamo/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
