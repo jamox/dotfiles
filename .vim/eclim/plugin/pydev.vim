@@ -2,7 +2,7 @@
 "
 " License: {{{
 "
-" Copyright (C) 2012  Eric Van Dewoestine
+" Copyright (C) 2012 - 2014  Eric Van Dewoestine
 "
 " This program is free software: you can redistribute it and/or modify
 " it under the terms of the GNU General Public License as published by
@@ -20,9 +20,24 @@
 " }}}
 
 " Command Declarations {{{
-if !exists(":AndroidReload")
-  command AndroidReload :call eclim#android#Reload()
+
+if !exists(":PythonInterpreter")
+  command! -nargs=?
+    \ -complete=customlist,eclim#python#project#CommandCompletePathOrInterpreterName
+    \ PythonInterpreter
+    \ :call eclim#python#project#ProjectInterpreter('<args>')
+  command! -nargs=0 PythonInterpreterList
+    \ :call eclim#python#project#InterpreterList()
+  command! -nargs=*
+    \ -complete=customlist,eclim#python#project#CommandCompleteInterpreterAdd
+    \ PythonInterpreterAdd
+    \ :call eclim#python#project#InterpreterAdd('<args>')
+  command! -nargs=1
+    \ -complete=customlist,eclim#python#project#CommandCompleteInterpreterPath
+    \ PythonInterpreterRemove
+    \ :call eclim#python#project#InterpreterRemove('<args>')
 endif
+
 " }}}
 
 " vim:ft=vim:fdm=marker
