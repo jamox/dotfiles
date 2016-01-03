@@ -37,3 +37,6 @@ symlink '.zshrc'
 symlink '.oh-my-zsh'
 
 symlink '.latexmkrc'
+
+# Tmux
+symlink '.tmux.conf'
