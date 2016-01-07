@@ -40,3 +40,6 @@ symlink '.latexmkrc'
 
 # Tmux
 symlink '.tmux.conf'
+
+#Screen
+symlink '.screenrc'
