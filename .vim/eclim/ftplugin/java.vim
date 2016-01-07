@@ -2,7 +2,7 @@
 "
 " License: {{{
 "
-" Copyright (C) 2005 - 2015  Eric Van Dewoestine
+" Copyright (C) 2005 - 2014  Eric Van Dewoestine
 "
 " This program is free software: you can redistribute it and/or modify
 " it under the terms of the GNU General Public License as published by
@@ -179,11 +179,9 @@ if !exists(":JavaDocSearch")
 endif
 
 if !exists(":JavaCallHierarchy")
-  command -buffer -bang -nargs=*
-    \ -complete=customlist,eclim#java#search#CommandCompleteSearchScope
-    \ JavaCallHierarchy
+  command -buffer -bang JavaCallHierarchy
     \ :call eclim#lang#hierarchy#CallHierarchy(
-      \ 'java', g:EclimJavaCallHierarchyDefaultAction, '<bang>', '<args>')
+      \ 'java', g:EclimJavaCallHierarchyDefaultAction, '<bang>')
 endif
 
 if !exists(":JavaHierarchy")

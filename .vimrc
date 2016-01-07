@@ -292,6 +292,7 @@ cnoremap sudow w !sudo tee % >/dev/null
 "" To move between buffers w/o saving 'em
 set hidden
 
+let g:EclimCompletionMethod = 'omnifunc'
 
 set magic
 
@@ -316,9 +317,4 @@ function! InsertJavaPackage()
   let result = append(2, "class " . filename . " {")
   let result = append(4, "}")
 endfunction
-
-
-
-
-
 
