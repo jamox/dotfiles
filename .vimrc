@@ -27,6 +27,7 @@ NeoBundle 'https://github.com/altercation/vim-colors-solarized.git'
 NeoBundle 'lervag/vimtex' " made it slow?
 NeoBundle 'jceb/vim-orgmode'
 NeoBundle 'tpope/vim-speeddating'
+NeoBundle 'mileszs/ack.vim'
 "NeoBundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
 NeoBundle 'Valloric/YouCompleteMe', {
             \ 'lazy': 1,
@@ -172,6 +173,7 @@ let g:ycm_semantic_triggers.tex = [
       \ 're!\\[A-Za-z]*(ref|cite)[A-Za-z]*([^]]*])?{([^}]*, ?)*'
       \ ]
 let g:vimtex_complete_close_braces=1
+let g:vimtex_complete_enabled=0
 
 
 "" Jamo: assume this autocompletes tabs...
@@ -187,7 +189,7 @@ autocmd FileType cpp set noexpandtab
 autocmd BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Procfile,config.ru,*.rake} set filetype=ruby
 
 " Make sure all markdown files have the correct filetype set and setup wrapping
-autocmd BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setf markdown | call s:setupWrapping()
+autocmd BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setf markdown "| call s:setupWrapping()
 
 " Treat JSON files like JavaScript
 autocmd BufNewFile,BufRead *.json set filetype=javascript
