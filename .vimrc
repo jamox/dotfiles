@@ -70,8 +70,13 @@ let g:airline_theme = 'dark'
 
 
 
-"Plugin 'vim-ruby/vim-ruby'
-""
+autocmd FileType ruby compiler ruby
+
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+autocmd FileType ruby,eruby let g:rubycomplete_use_bundler = 1
+"
 "" Basic setup
 ""
 let mapleader = ","
@@ -166,20 +171,19 @@ endfunction
 
 set autoindent            " use the indent of the previous line for a newly created line
 
-if !exists('g:ycm_semantic_triggers')
-  let g:ycm_semantic_triggers = {}
-endif
-let g:ycm_semantic_triggers.tex = [
-      \ 're!\\[A-Za-z]*(ref|cite)[A-Za-z]*([^]]*])?{([^}]*, ?)*'
-      \ ]
+let g:ycm_semantic_triggers =  {
+  \   'c' : ['->', '.'],
+  \   'cpp,objcpp' : ['->', '.', '::'],
+  \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
+  \   'ruby' : ['.', '::'],
+  \   'tex' :  ['re!\\[A-Za-z]*(ref|cite)[A-Za-z]*([^]]*])?{([^}]*, ?)*']
+  \ }
+
+
 let g:vimtex_complete_close_braces=1
 let g:vimtex_complete_enabled=0
 
 
-"" Jamo: assume this autocompletes tabs...
-""inoremap <lt>/ </<C-X><C-O>
-" use real tabs ...
-autocmd FileType make set noexpandtab
 "autocmd FileType python set noexpandtab
 autocmd FileType c set noexpandtab
 autocmd FileType cpp set noexpandtab
