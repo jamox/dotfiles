@@ -1,9 +1,12 @@
+if 0 | endif
 
-if has('vim_starting')
+if &compatible
   set nocompatible               " Be iMproved
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
+
+" Required:
+set runtimepath^=~/.vim/bundle/neobundle.vim/
+
 
 " Required:
 call neobundle#begin(expand('~/.vim/bundle/'))
@@ -12,23 +15,22 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 " Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-
-" Add or remove your Bundles here:
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'scrooloose/syntastic.git'
 NeoBundle 'vim-ruby/vim-ruby.git'
+NeoBundle 'bling/vim-airline'
 NeoBundle 'tpope/vim-rails.git'
 NeoBundle 'bling/vim-airline'
+NeoBundle 'scrooloose/syntastic.git'
 NeoBundle 'kien/ctrlp.vim' " TODO: make this lazy
 NeoBundle 'scrooloose/nerdtree.git'
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'https://github.com/altercation/vim-colors-solarized.git'
-NeoBundle 'lervag/vimtex' " made it slow?
 NeoBundle 'jceb/vim-orgmode'
 NeoBundle 'tpope/vim-speeddating'
 NeoBundle 'mileszs/ack.vim'
-"NeoBundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
+NeoBundle 'https://github.com/altercation/vim-colors-solarized.git'
+NeoBundle 'google/vim-maktaba'
+NeoBundle 'google/vim-codefmt'
+NeoBundle 'google/vim-glaive'
+NeoBundle 'lervag/vimtex'
 NeoBundle 'Valloric/YouCompleteMe', {
             \ 'lazy': 1,
             \ 'augroup': 'youcompletemeStart',
@@ -43,36 +45,25 @@ NeoBundle 'Valloric/YouCompleteMe', {
             \ 'vim_version': '7.3.584',
             \}
 
-NeoBundle 'google/vim-maktaba'
-NeoBundle 'google/vim-codefmt'
-NeoBundle 'google/vim-glaive'
-
 call neobundle#end()
 
-call glaive#Install()
-
-
-" Required:
 filetype plugin indent on
 
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
 NeoBundleCheck
+
+set t_Co=256
+
 let g:airline#extensions#tabline#enabled = 1
 
 let g:airline_powerline_fonts = 1
 
-set t_Co=256
 
 let g:Powerline_symbols = 'fancy'
 let g:airline_theme = 'dark'
 
-
-
-
 autocmd FileType ruby compiler ruby
 
-autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+"autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_use_bundler = 1
@@ -122,8 +113,6 @@ set backspace=indent,eol,start    " backspace through everything in insert mode
 let ruby_space_errors=1
 let c_space_errors=1
 
-
-
 autocmd BufWritePre * :call <SID>StripWhite()
 fun! <SID>StripWhite()
   %s/[ \t]\+$//ge
@@ -168,7 +157,6 @@ function! s:setupWrapping()
   set nolist
 endfunction
 
-
 set autoindent            " use the indent of the previous line for a newly created line
 
 let g:ycm_semantic_triggers =  {
@@ -178,7 +166,6 @@ let g:ycm_semantic_triggers =  {
   \   'ruby' : ['.', '::'],
   \   'tex' :  ['re!\\[A-Za-z]*(ref|cite)[A-Za-z]*([^]]*])?{([^}]*, ?)*']
   \ }
-
 
 let g:vimtex_complete_close_braces=1
 let g:vimtex_complete_enabled=0
@@ -295,13 +282,11 @@ cnoremap sudow w !sudo tee % >/dev/null
 
 "" To move between buffers w/o saving 'em
 set hidden
-
-let g:EclimCompletionMethod = 'omnifunc'
-
 set magic
 
-
-let g:EclimCompletionMethod = 'omnifunc'
+" Breaks vim-ruby
+"let g:EclimCompletionMethod = 'omnifunc'
+let g:EclimRubyValidate = 0
 
 autocmd BufNewFile *.java call InsertJavaPackage()
 
@@ -321,4 +306,3 @@ function! InsertJavaPackage()
   let result = append(2, "class " . filename . " {")
   let result = append(4, "}")
 endfunction
-

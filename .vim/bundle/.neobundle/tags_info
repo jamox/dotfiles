@@ -1,8 +1,7 @@
 YouCompleteMe
+ack.vim
 ctrlp.vim
 neobundle.vim
-neosnippet-snippets
-neosnippet.vim
 nerdtree
 syntastic
 vim-airline
