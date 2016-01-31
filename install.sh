@@ -43,3 +43,6 @@ symlink '.tmux.conf'
 
 #Screen
 symlink '.screenrc'
+
+#Git
+symlink '.gitconfig'

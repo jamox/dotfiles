@@ -1,0 +1,32 @@
+[user]
+	name = Jarmo Isotalo
+	email = jamo@isotalo.fi
+[core]
+	excludesfile = /Users/jamo/.gitignore_global
+	editor = vim
+	whitespace = cr-at-eol
+[help]
+	autocorrect = 1
+[color]
+	ui = 1
+[alias]
+	 s = status -sb
+	 status = status -sb
+	 llog = log --date=local
+	 l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+	ctags = !.git/hooks/ctags
+[push]
+	default = simple
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[github]
+	user = jamox
+[init]
+	templatedir = ~/.git
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
