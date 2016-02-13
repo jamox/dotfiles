@@ -1,56 +1,38 @@
 if 0 | endif
 
+
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'vim-ruby/vim-ruby'
+Plug 'bling/vim-airline'
+Plug 'tpope/vim-rails'
+Plug 'bling/vim-airline'
+Plug 'scrooloose/syntastic'
+Plug 'kien/ctrlp.vim' " TODO: make this lazy
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'tpope/vim-fugitive'
+Plug 'jceb/vim-orgmode'
+Plug 'tpope/vim-speeddating'
+Plug 'mileszs/ack.vim'
+Plug 'altercation/vim-colors-solarized'
+"Plug 'google/vim-maktaba'
+"Plug 'google/vim-codefmt'
+"Plug 'google/vim-glaive'
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+Plug 'lervag/vimtex'
+Plug 'thoughtbot/vim-rspec'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+
+call plug#end()
+
+
 if &compatible
   set nocompatible               " Be iMproved
 endif
 
-" Required:
-set runtimepath^=~/.vim/bundle/neobundle.vim/
-
-
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-NeoBundle 'vim-ruby/vim-ruby.git'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'tpope/vim-rails.git'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'scrooloose/syntastic.git'
-NeoBundle 'kien/ctrlp.vim' " TODO: make this lazy
-NeoBundle 'scrooloose/nerdtree.git'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'jceb/vim-orgmode'
-NeoBundle 'tpope/vim-speeddating'
-NeoBundle 'mileszs/ack.vim'
-NeoBundle 'https://github.com/altercation/vim-colors-solarized.git'
-NeoBundle 'google/vim-maktaba'
-NeoBundle 'google/vim-codefmt'
-NeoBundle 'google/vim-glaive'
-NeoBundle 'lervag/vimtex'
-NeoBundle 'thoughtbot/vim-rspec'
-NeoBundle 'Valloric/YouCompleteMe', {
-            \ 'lazy': 1,
-            \ 'augroup': 'youcompletemeStart',
-            \ 'autoload': {
-            \   'insert': 1,
-            \ },
-            \ 'build': {
-            \     'unix': './install.sh --clang-completer --system-libclang',
-            \ },
-            \ 'build_commands': 'cmake',
-            \ 'disabled': !has('python'),
-            \ 'vim_version': '7.3.584',
-            \}
-
-call neobundle#end()
-
 filetype plugin indent on
 
-NeoBundleCheck
 
 set t_Co=256
 
@@ -132,7 +114,9 @@ set title
 set list
 set listchars=tab:>-,trail:-,nbsp:%
 set nohlsearch
-set term=screen-256color
+if !has('nvim')
+  set term=screen-256color
+endif
 
 
 ""
