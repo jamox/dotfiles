@@ -46,3 +46,9 @@ symlink '.screenrc'
 
 #Git
 symlink '.gitconfig'
+
+# NeoVim
+#mkdir -p ~/.config/nvim
+symlink '.config/nvim'
+# link vimrc to neovimrc
+ln -s ~/.vimrc ~/.config/nvim/init.vim

@@ -31,6 +31,7 @@ NeoBundle 'google/vim-maktaba'
 NeoBundle 'google/vim-codefmt'
 NeoBundle 'google/vim-glaive'
 NeoBundle 'lervag/vimtex'
+NeoBundle 'thoughtbot/vim-rspec'
 NeoBundle 'Valloric/YouCompleteMe', {
             \ 'lazy': 1,
             \ 'augroup': 'youcompletemeStart',
@@ -306,3 +307,12 @@ function! InsertJavaPackage()
   let result = append(2, "class " . filename . " {")
   let result = append(4, "}")
 endfunction
+
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+let g:rspec_runner = "os_x_iterm2"
+
+
