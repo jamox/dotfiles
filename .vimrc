@@ -44,8 +44,9 @@ let g:airline_powerline_fonts = 1
 let g:Powerline_symbols = 'fancy'
 let g:airline_theme = 'dark'
 
-autocmd FileType ruby compiler ruby
+"autocmd FileType ruby compiler ruby
 
+" autocmd FileType ruby set omnifunc=rubycomplete#Complete
 "autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
