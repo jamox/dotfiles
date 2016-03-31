@@ -63,10 +63,10 @@ export GNUTERM x11
 
 if [ -d "/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/" ]
 then
-  export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/"
+  export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home"
 elif [ -d "/usr/lib/jvm/java-7-openjdk-amd64/jre/" ]
 then
-  export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64/"
+  export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64"
 fi
 
 if [ -f /usr/local/rvm/scripts/rvm ]

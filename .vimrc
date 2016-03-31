@@ -24,6 +24,7 @@ Plug 'vim-scripts/Vim-R-plugin'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'lervag/vimtex'
 Plug 'thoughtbot/vim-rspec'
+Plug 'derekwyatt/vim-scala'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 call plug#end()
@@ -273,7 +274,8 @@ set hidden
 set magic
 
 " Breaks vim-ruby
-"let g:EclimCompletionMethod = 'omnifunc'
+" TODO
+let g:EclimCompletionMethod = 'omnifunc'
 let g:EclimRubyValidate = 0
 
 autocmd BufNewFile *.java call InsertJavaPackage()
