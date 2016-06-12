@@ -87,4 +87,3 @@ export NVM_DIR="/home/jamo/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export M3_HOME=/usr/local/Cellar/maven/3.3.3/
-eval "$(docker-machine env default)"

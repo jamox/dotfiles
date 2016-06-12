@@ -4,6 +4,7 @@ if 0 | endif
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'pangloss/vim-javascript'
 Plug 'vim-ruby/vim-ruby'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-rails'
@@ -17,7 +18,6 @@ Plug 'tpope/vim-speeddating'
 Plug 'mileszs/ack.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'vim-scripts/Vim-R-plugin'
 "Plug 'google/vim-maktaba'
 "Plug 'google/vim-codefmt'
 "Plug 'google/vim-glaive'
@@ -25,7 +25,9 @@ Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'lervag/vimtex'
 Plug 'thoughtbot/vim-rspec'
 Plug 'derekwyatt/vim-scala'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'Shougo/deoplete.nvim'
+Plug 'editorconfig/editorconfig-vim'
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 call plug#end()
 
@@ -148,16 +150,27 @@ endfunction
 
 set autoindent            " use the indent of the previous line for a newly created line
 
-let g:ycm_semantic_triggers =  {
-  \   'c' : ['->', '.'],
-  \   'cpp,objcpp' : ['->', '.', '::'],
-  \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
-  \   'ruby' : ['.', '::'],
-  \   'tex' :  ['re!\\[A-Za-z]*(ref|cite)[A-Za-z]*([^]]*])?{([^}]*, ?)*']
-  \ }
+let g:syntastic_javascript_checkers = ['eslint']
+"
+let g:javascript_enable_domhtmlcss = 1
+
+"let g:ycm_semantic_triggers =  {
+"  \   'c' : ['->', '.'],
+"  \   'cpp,objcpp' : ['->', '.', '::'],
+"  \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
+"  \   'ruby' : ['.', '::'],
+"  \   'tex' :  ['re!\\[A-Za-z]*(ref|cite)[A-Za-z]*([^]]*])?{([^}]*, ?)*']
+"  \ }
 
 let g:vimtex_complete_close_braces=1
 let g:vimtex_complete_enabled=0
+
+let g:deoplete#enable_at_startup = 1
+" Use smartcase.
+let g:deoplete#enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:deoplete#sources#syntax#min_keyword_length = 3
+let g:deoplete#lock_buffer_name_pattern = '\*ku\*'
 
 
 "autocmd FileType python set noexpandtab
