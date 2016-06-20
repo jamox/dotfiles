@@ -26,3 +26,5 @@
 	smudge = git-media-smudge %f
 [credential]
 	helper = osxkeychain
+[diff]
+	compactionHeuristic = true

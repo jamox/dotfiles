@@ -37,7 +37,12 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-export PATH=$HOME/bin:/Applications/eclipse:$HOME/android-sdks/platform-tools:$HOME/android-sdks/tools:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/usr/local/Cellar/ansible/1.4.3/bin/:$PATH
+export PATH=$HOME/bin:/Applications/eclipse:$HOME/android-sdks/platform-tools:$HOME/android-sdks/tools:$HOME/.bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:$PATH
+
+if [ -f /usr/local/share/zsh/site-functions ]; then
+  . /usr/local/share/zsh/site-functions
+fi
+
 
 if [ -d $HOME/.rbenv ]; then
   export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
@@ -75,9 +80,6 @@ then
 fi
 
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
 
 # added by travis gem
@@ -87,3 +89,4 @@ export NVM_DIR="/home/jamo/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export M3_HOME=/usr/local/Cellar/maven/3.3.3/
+
