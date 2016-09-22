@@ -39,10 +39,9 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH=$HOME/bin:/Applications/eclipse:$HOME/android-sdks/platform-tools:$HOME/android-sdks/tools:$HOME/.bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:$PATH
 
-if [ -f /usr/local/share/zsh/site-functions ]; then
-  . /usr/local/share/zsh/site-functions
-fi
-
+#if [ -f /usr/local/share/zsh/site-functions ]; then
+#  . /usr/local/share/zsh/site-functions
+#fi
 
 if [ -d $HOME/.rbenv ]; then
   export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
@@ -79,6 +78,7 @@ then
   source /usr/local/rvm/scripts/rvm
 fi
 
+export EDITOR=vim
 
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
 
@@ -90,3 +90,6 @@ export NVM_DIR="/home/jamo/.nvm"
 
 export M3_HOME=/usr/local/Cellar/maven/3.3.3/
 
+[[ -s "$(brew --prefix dvm)/dvm.sh" ]] && source "$(brew --prefix dvm)/dvm.sh"
+
+[[ -s "$(brew --prefix dvm)/bash_completion" ]] && source "$(brew --prefix dvm)/bash_completion"

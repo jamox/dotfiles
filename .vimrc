@@ -1,14 +1,12 @@
 if 0 | endif
 
-
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'pangloss/vim-javascript'
 Plug 'vim-ruby/vim-ruby'
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-rails'
-Plug 'bling/vim-airline'
 Plug 'scrooloose/syntastic'
 Plug 'kien/ctrlp.vim' " TODO: make this lazy
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -31,7 +29,6 @@ Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
 
-
 if &compatible
   set nocompatible               " Be iMproved
 endif
@@ -47,7 +44,8 @@ let g:airline_powerline_fonts = 1
 
 
 let g:Powerline_symbols = 'fancy'
-let g:airline_theme = 'dark'
+let g:airline_theme = 'solarized' "'dark'
+let g:airline_detect_paste=1
 
 "autocmd FileType ruby compiler ruby
 
@@ -277,7 +275,10 @@ imap jj <Esc>
 
 set background=dark
 let g:solarized_termcolors=256
+let g:solarized_termtrans=1
 colorscheme solarized
+
+
 cnoremap sudow w !sudo tee % >/dev/null
 
 
